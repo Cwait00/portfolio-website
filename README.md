@@ -25,3 +25,23 @@ This is a personal portfolio website showcasing my projects, technical skills, a
 1. Clone the repository:
    ```sh
    git clone https://github.com/Cwait00/portfolio-website.git
+
+2.Navigate to the project folder:
+
+cd portfolio-website
+
+3. Install dependencies:
+
+npm install
+
+4. Run the development server:
+
+npm run dev
+
+📫 Contact
+For inquiries, reach out via:
+
+Email: cwaitanobongoza@gmail.com
+LinkedIn: www.linkedin.com/in/cwaita-nobongoza-4a449812b
+GitHub: https://github.com/Cwait00
+
