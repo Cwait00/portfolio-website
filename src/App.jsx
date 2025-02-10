@@ -3,6 +3,26 @@ import { Card, CardContent } from "./components/ui/card";
 import { Button } from "./components/ui/button";
 import { FaExternalLinkAlt, FaEnvelope, FaLinkedin, FaGithub, FaUpload, FaSave } from "react-icons/fa";
 
+const techSkills = [
+  "JavaScript (ES6+)",
+  "React.js",
+  "Node.js",
+  "Express.js",
+  "MongoDB",
+  "MySQL",
+  "Redis",
+  "Tailwind CSS",
+  "REST APIs",
+  "Python",
+  "Unit Testing (Jest, Mocha, Chai)",
+  "Docker",
+  "Git & GitHub",
+  "CI/CD",
+  "WebSockets",
+  "Firebase Authentication",
+  "Cloud Hosting"
+];
+
 const projects = [
   {
     name: "Blaq Packer",
@@ -56,11 +76,10 @@ export default function Portfolio() {
 
   return (
     <div className="container mx-auto p-6">
-      {/* Header */}
       <header className="text-center mb-10">
         <img
           src={profileImage}
-          alt="Cwaita Nobongoza (Chef Lou)"
+          alt="Cwaita Nobongoza"
           className="w-40 h-40 rounded-full mx-auto mb-4 border-4 border-gray-300 object-cover"
         />
         <input
@@ -84,18 +103,25 @@ export default function Portfolio() {
         <p className="text-lg text-gray-600">Full-Stack Developer | Hospitality & Business Solutions</p>
       </header>
 
-      {/* About Me Section */}
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">About Me</h2>
         <p className="text-gray-700">
           I am a versatile professional with expertise in both the culinary and technology industries. With over 10 years of experience in the
           hospitality sector as a food and beverage manager, and 4 years as a chef, I have honed my skills in customer service and
           business management. Additionally, I am a certified software engineer specializing in backend development, helping businesses
-          in the hospitality industry digitize their operations. My passion is creating seamless digital solutions for restaurants, construction companies, B&Bs, and small businesses.
+          in the hospitality industry digitize their operations. My passion is creating seamless digital solutions for restaurants, B&Bs, construction companies, and small-medium businesses.
         </p>
       </section>
 
-      {/* Projects Section */}
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold mb-4">Technical Skills</h2>
+        <ul className="list-disc list-inside text-gray-700">
+          {techSkills.map((skill, index) => (
+            <li key={index} className="p-1">{skill}</li>
+          ))}
+        </ul>
+      </section>
+
       <section>
         <h2 className="text-2xl font-semibold mb-6">Projects</h2>
         <div className="grid md:grid-cols-3 gap-6">
@@ -118,7 +144,6 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section className="mt-12 text-center">
         <h2 className="text-2xl font-semibold mb-6">Contact Me</h2>
         <div className="flex justify-center space-x-6">
